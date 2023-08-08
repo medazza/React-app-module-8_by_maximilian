@@ -43,10 +43,11 @@ const AddUser = (props) => {
     };
 
     return (
-        <div>
+        <>
         {error && <ErrorModal title={error.title}
                     message={error.message}
                     onConfirm={errorHandler}/>}
+                    
         <Card cssClass={classes.input}>
             <form onSubmit={addUserHandler}>
                 <label htmlFor="username">Username</label>
@@ -65,7 +66,7 @@ const AddUser = (props) => {
                 <Button type="submit">Add User</Button>
             </form>
         </Card>
-        </div>
+        </>
 
     );
 };
